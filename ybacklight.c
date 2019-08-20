@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 
 	command = argv[1];
 
-	if (strcmp(command, "-get") == 0) {
+	if (strncmp(command, "-get", 4) == 0) {
 		printf("%d\n", brightness());
 		return 0;
 	}
@@ -103,21 +103,21 @@ int main(int argc, char *argv[])
 		goto usage;
 	}
 
-	if (strcmp(command, "-set") == 0) {
+	if (strncmp(command, "-set", 4) == 0) {
 		if(set_brightness(value)) {
 			goto fail;
 		}
 		return 0;
 	}
 
-	if (strcmp(command, "-inc") == 0) {
+	if (strncmp(command, "-inc"), 4 == 0) {
 		if(inc_brightness(value)) {
 			goto fail;
 		}
 		return 0;
 	}
 
-	if (strcmp(command, "-dec") == 0) {
+	if (strncmp(command, "-dec", 4) == 0) {
 		if(dec_brightness(value)) {
 			goto fail;
 		}
