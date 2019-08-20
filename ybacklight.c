@@ -58,7 +58,7 @@ int set_brightness(int value)
 {
 	if (value < 1) {
 		value = 1;
-	else if (value > 100 {
+	else if (value > 100) {
 		value = 100;
 	}
 
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 
-	if (strncmp(command, "-inc"), 4 == 0) {
+	if (strncmp(command, "-inc", 4) == 0) {
 		if(inc_brightness(value)) {
 			goto fail;
 		}
