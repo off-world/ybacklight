@@ -58,7 +58,7 @@ int set_brightness(int value)
 {
 	if (value < 1) {
 		value = 1;
-	else if (value > 100) {
+	} else if (value > 100) {
 		value = 100;
 	}
 
