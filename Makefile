@@ -13,6 +13,7 @@ ybacklight.o: ybacklight.c
 	$(CC) $(CFLAGS) -c $^
 
 install:
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp ybacklight $(DESTDIR)$(PREFIX)/bin/ybacklight
 
 uninstall:
